@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <link rel="stylesheet" type="text/css" href="default.css">
+    <link rel="icon" type="image/x-icon" href="Media/Imgs/Bliss_(Windows_XP).png\" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>My Harmony Portal</title>
+    
+  </head>
+  
+  <body>
+    <div class="container">
+    <div class="TopBar">
+        <video width="320" autoplay playsinline loop controls>
+            <source src="Media/todaysgonnabe.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+</video>
+
+    </div>
+        <a href="index.html">Home</a>
+        <a href="FlashLibrary.html">Flash Library</a>
+        <a href="https://github.com/iaskedgaming/CLKLKLKLKLKLLLKLK/tree/main">Github repository</a>
+    <div id="SplashtxtBar">
+         <p1>fuck edgar</p1>
+    </div>
+    <div id = "imgcont">
+        <img id="Randimg" height="200px" width="200px" src="Media/Imgs/example1.gif" alt="marco was being a big baby so this image has to be sadly removed">
+    </div>
+    <h2>Games!</h2>
+    <div class="center">
+        <a href="FlashLibrary.html">Flash Library</a>
+         <br>
+        <a href="Getaway-Shootout-main/Getaway-Shootout-main/index.html">Getaway Shootout</a>
+         <br>
+        <a href="https://whoaskedgaming.github.io/myscoolawesmses/">Tetrist(broken)</a>
+         <br>
+        <a href="cookieclicker-test/cookieclicker-test/index.html">Cookie Clicker</a>
+        <br>
+        <a href="https://drive.google.com/file/d/1W8QJivSOqeqCXicaPkIAJZyK8O1Uexzh/view?usp=sharing">Minecraft (Eaglercraft) Download </a>
+        <br>
+        <a href="https://drive.google.com/drive/folders/1oqUZqilgT9ZM_hH0EXCnN9b6mzCIwTje?usp=sharing">Windows computer games drive</a>
+    </div>
+    <br>    
+    <h1><a href="https://forms.gle/EqQg2XBcXEdwncbz7">Suggestions Forum</a></h1>
+    <br>
+    <p1>Images, splash text, new website features and games can be suggested</p1>
+    <br>
+    <p1>ignore the stupid watermark</p1>
+    <br>
+    <!-- Elfsight Comments | Untitled Comments -->
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <div class="elfsight-app-c986c6f1-f6c8-4541-83d0-0b2838accd45" data-elfsight-app-lazy></div>
+    <br>
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <div class="elfsight-app-aae58035-22ac-445d-9a96-06c89a59d61a" data-elfsight-app-lazy></div>
+  </div>
+</body>
+    <script>
+
+        let Splashtxt = ["Fuck Edgar", "Well, take a can rub it on a cat then that cat gets all fat, not too sure whats up with that.", "Yo... gurt", "I damn Rich Preece to eternal damnation", "I just wanted to see tung tung tung sahur one last time", " (Funny splash text goes here)", "Happy birthday patrick!!!", "Do you realize, do you realize something...", "Also try Terraria!", "AIPAC free!", "GLORY TO ISREAL - Marco", "Can the admins stop blocking this in technicality this educational.",'this school is tung tung sahorrible!', "get rid of yo gurt this not funny", "dattebayo", "Ahhh, todays gonna be a great day!", "New year new me!"];
+        let TxtId = Math.floor(Math.random() * (Splashtxt.length - 1 + 1)) + 1;
+        const container = document.getElementById("SplashtxtBar");
+        container.innerHTML = "<p1>" + Splashtxt[TxtId] + "</p1>";
+        /// change img loop theres another for the changing image loop
+        setInterval(() => {
+          TxtId = Math.floor(Math.random() * (Splashtxt.length - 1 + 1)) + 1;
+          container.innerHTML = "<p1>" + Splashtxt[TxtId] + "</p1>";
+          console.log(TxtId)
+        }, 5000);
+        
+        let ImgId = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+        const imgcontainer = document.getElementById("Randimg");
+        let imgarray = ["Media/Catimgs/blails.jpg", "Media/Catimgs/Doo_Doo_Fart.png", "Media/Catimgs/Dietzen_D._Dinklebottom.png", "Media/Catimgs/image.png", "Media/Catimgs/IMG_0789.jpeg", "Media/Catimgs/Screenshot 2026-03-12 11.21.45 AM.png", "Media/Catimgs/unnamed (1).png", "Media/Catimgs/unnamed (2).png", "Media/Catimgs/unnamed (3).png", "Media/Catimgs/unnamed.png", "Media/Catimgs/image_100.jpg","Media/Catimgs/theanoinotng.gif", "Media/Catimgs/Arthur (1).jpg"];
+
+        imgcontainer.src = imgarray[ImgId];
+         setInterval(() => {
+          ImgId = Math.floor(Math.random() * (imgarray.length - 1 + 1)) + 1;
+          imgcontainer.src = imgarray[ImgId];
+          console.log(ImgId)
+        }, 3000);
+        
+    </script>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="Media/Imgs/Bliss_(Windows_XP).png" />
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+    <title>My Harmony Portal</title>
+
+    <style>
+        body {
+            justify-content: center;
+            background-color: rgb(37, 37, 37);
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #game-buttons button {
+            margin: 6px;
+            padding: 8px 14px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #ruffle-container {
+            
+            width: 600px;
+            height: 400px;
+            border: 10px solid #ffffff;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .TopBar {
+            display: flex;  
+            border: 10px outset rgb(169, 169, 169);
+            background-color: rgb(37, 37, 37);
+            text-align: start;
+            height: 50px;
+            overflow-x: scroll;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Flash Library</h1>
+
+    <p>Click 2 swap</p>
+    <br>
+    <button id="random-game">Random Gayme</button>
+    <div class="TopBar">
+        <button class="swapbutton" data-swf="bloonstd5.swf">Bloons TD 5</button>
+        <button class="swapbutton" data-swf="bloonstd4.swf">Bloons TD 4</button>
+        <button class="swapbutton" data-swf="bloonstd3.swf">Bloons TD 3</button>
+        <button class="swapbutton" data-swf="supermario63.swf">Super Mario 63</button>
+        <button class="swapbutton" data-swf="Thebindingofissac.swf">The Binding of Isaac</button>
+        <button class="swapbutton" data-swf="unfair_mario.swf">Unfair mario</button>
+        <button class="swapbutton" data-swf="giveuprobot2.swf">Give up Robot 2</button>
+        <button class="swapbutton" data-swf="giveuprobot.swf">Give up Robot</button>
+        <button class="swapbutton" data-swf="MPNC.swf">Mc Project Nexus Classic</button>
+        <button class="swapbutton" data-swf="portal2d.swf">Portal 2D</button>
+        <button class="swapbutton" data-swf="run2.swf">Run 2</button>
+        <button class="swapbutton" data-swf="run3-new.swf">Run 3</button>
+        <button class="swapbutton" data-swf="flash_bloxorz.swf">Bloxorz</button>
+        <button class="swapbutton" data-swf="bad-ice-cream-3-www-boysplaygame-com.swf">Bad Ice Cream 3</button>
+        <button class="swapbutton" data-swf="2048 (1).swf">2048</button>
+        <button class="swapbutton" data-swf="ducklife1.swf">Duck Life 1</button>
+        <button class="swapbutton" data-swf="duck-life-2-world-champion.swf">Duck Life 2</button>
+        <button class="swapbutton" data-swf="duck-life-3--evolution.swf">Duck Life 3</button>
+        <button class="swapbutton" data-swf="flash-sonic.swf">Flash Sonic</button>
+        <button class="swapbutton" data-swf="henry-stickmin-breaking-the-bank.swf">Henry Stickmin: Breaking the Bank</button>
+        <button class="swapbutton" data-swf="henry-stickmin-escaping-the-prison.swf">Henry Stickmin: Escaping the Prison</button>
+        <button class="swapbutton" data-swf="henry-stickmin-stealing-the-diamond.swf">Henry Stickmin: Stealing the Diamond</button>
+        <button class="swapbutton" data-swf="super-mario-bros-crossover-3.swf">Super Mario Bros Crossover 3</button>
+        <button class="swapbutton" data-swf="the-fancy-pants-adventure-1.swf">The Fancy Pants Adventure 1</button>
+        <button class="swapbutton" data-swf="Age_Of_War.swf">Age Of War</button>
+    </div>
+
+    <div id="ruffle-container"></div>
+
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+
+        function loadGame(swfFile) {
+            const container = document.getElementById("ruffle-container");
+
+            container.innerHTML = "";
+
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+
+            container.appendChild(player);
+
+            player.load({
+                url: "SWFs/" + swfFile,
+                backgroundColor: "#000000",
+            });
+        }
+
+        // Attach button listeners
+        document.querySelectorAll(".swapbutton").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const swf = btn.dataset.swf;
+                loadGame(swf);
+            });
+        });
+        // rand button logic
+        document.getElementById("random-game").addEventListener("click", () => {
+            const buttons = document.querySelectorAll(".swapbutton"); // get the buttons
+            const randomIndex = Math.floor(Math.random() * buttons.length); // get swf paths from buttons div or something yeah 
+            const swf = buttons[randomIndex].dataset.swf;
+            loadGame(swf);
+        });
+    </script>
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="index.html">Home</a>
+    <br>
+    <p1>how to load save files</p1>
+    <br>
+    <p1>yes this works on chrome books 2</p1>
+    <br>
+    <img width="400px" src="Media/Imgs/example1.gif" alt="Description of the image">
+    <br>
+    <br>
+</body>
+</html>
